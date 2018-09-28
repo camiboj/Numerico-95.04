@@ -1,4 +1,4 @@
-function resultado = gauss_seidel(A,b)
+function [resultado,k] = gauss_seidel(A,b)
   n = length(b);
   error = 10^-5;
   
@@ -15,7 +15,8 @@ function resultado = gauss_seidel(A,b)
   endfor
   x1 = x';
 
-  x_iterate=[];  
+  x_iterate = [];  
+  k = 1;
   while (norm(x1-x0, inf) > error && k<150)
     for j = 1 : n
       suma_2 = A(j, [j+1:n]) * x1([j+1:n]);

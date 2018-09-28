@@ -1,4 +1,4 @@
-function resultado = jacobi(A,b)
+function [resultado,k] = jacobi(A,b)
   n = length(b);
   error = 10^-5;
   
