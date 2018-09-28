@@ -18,10 +18,12 @@ function resultado = jacobi()
   k=1;
   while (norm(x1-x0, inf) > error && k<150)
     for j = 1 : n
-      x_ny(j) = ((b(j) - A(j,[1:j-1,j+1:n]) * x1([1:j-1,j+1:n])) / A(j,j));
+      suma_1 = A(j, [1:j-1]) * x1([1:j-1]);
+      suma_2 = A(j, [j+1:n]) * x1([j+1:n]);
+      x_iterate(j) = ((b(j) - suma_1 - suma_2) / A(j,j));
     endfor
      x0 = x1;
-     x1 = transpose(x_ny);
+     x1 = transpose(x_iterate);
      k = k + 1;
   endwhile
   if(k==150)
