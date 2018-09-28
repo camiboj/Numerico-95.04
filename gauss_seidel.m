@@ -1,5 +1,5 @@
 function [resultado,k] = gauss_seidel(A,b)
-  n = length(b);
+  n = 81;
   error = 10^-5;
   
   x0 = [];  
