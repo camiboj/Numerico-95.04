@@ -1,4 +1,4 @@
-function error = error_porcentual_jacobi()
+function error = error_relativo_jacobi()
   
   A = generador_matriz();
   b = generador_vector();
