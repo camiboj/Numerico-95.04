@@ -11,12 +11,12 @@ function error = error_relativo_jacobi()
   error_componente_min = error_componente_max;
   
   for i=1 : length(b)
-    error_porcentual = (x_exacto(i) - x_jacobi(i)) / (x_exacto(i));
-    if(error_porcentual > error_componente_max)
-      error_porcentual_max = error_porcentual;
+    error_relativo = (x_exacto(i) - x_jacobi(i)) / (x_exacto(i));
+    if(error_relativo > error_componente_max)
+      error_relativo_max = error_relativo;
     endif
-    if(error_porcentual < error_componente_min)
-      error_porcentual_min = error_porcentual;
+    if(error_relativo < error_componente_min)
+      error_relativo_min = error_relativo;
     endif
   endfor
   
