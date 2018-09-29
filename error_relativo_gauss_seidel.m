@@ -1,4 +1,4 @@
-function error = error_porcentual_gauss_seidel()
+function error = error_relativo_gauss_seidel()
   
   A = generador_matriz();
   b = generador_vector();
@@ -20,7 +20,7 @@ function error = error_porcentual_gauss_seidel()
     endif
   endfor
   
-error_porcentual_min 
-error_porcentual_max
+error_relativo_min 
+error_relativo_max
 
 end

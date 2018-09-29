@@ -20,6 +20,6 @@ function error = error_relativo_jacobi()
     endif
   endfor
   
-error_porcentual_min 
-error_porcentual_max
+error_relativo_min 
+error_relativo_max
 end
