@@ -7,5 +7,4 @@ function tp
   plotear(x_jacobi, "Jacobi");
   [x_gauss_seidel, k_gauss_seidel] = gauss_seidel(A,b);
   plotear(x_gauss_seidel, "Gauss Saidel");
-
 end  

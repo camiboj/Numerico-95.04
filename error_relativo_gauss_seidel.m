@@ -5,7 +5,7 @@ function error = error_relativo_gauss_seidel()
   x_exacto = A\b;
   [x_gs, k_gs] = gauss_seidel(A,b);
   
-  error = norm(x_exacto-x_gs) / norm(x_gs)
+  error = norm(x_exacto-x_gs, inf) / norm(x_gs)
    
   error_componente_max = (x_exacto(1) - x_gs(1)) / (x_exacto(1));
   error_componente_min = error_componente_max;

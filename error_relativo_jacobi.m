@@ -5,7 +5,7 @@ function error = error_relativo_jacobi()
   x_exacto = A\b;
   [x_jacobi, k_jacobi] = jacobi(A,b);
   
-  error = norm(x_exacto-x_jacobi) / norm(x_exacto);
+  error = norm(x_exacto-x_jacobi, inf) / norm(x_exacto);
   
   error_componente_max = (x_exacto(1) - x_jacobi(1)) / (x_exacto(1));
   error_componente_min = error_componente_max;

@@ -22,4 +22,4 @@ function plot(potencial)
   endfor
   scatter3 (x(:), y(:), z(:), [], z(:));
   title ({"hola", "chau"});
-endfunction
+end

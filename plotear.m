@@ -22,5 +22,4 @@ function plotear(potencial, modo)
   endfor
   scatter3 (x(:), y(:), z(:), 10, z(:));
   title ({"potencial", modo});
-endfunction
-
+end
