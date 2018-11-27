@@ -28,10 +28,10 @@ function tp2 ()
   resultado_rungekutta4_3 = rungeKuttaOrden4('fprima3', T, cond_iniciales, h);
   resultado_rungekutta4_4 = rungeKuttaOrden4('fprima4', T, cond_iniciales, h); 
  
-  graficar(T, resultado_euler_1, resultado_exacto_1, resultado_rungekutta2_1, resultado_rungekutta4_1, "Escenario 1"); 
-  graficar(T, resultado_euler_2, resultado_exacto_2, resultado_rungekutta2_2, resultado_rungekutta4_2, "Escenario 2"); 
-  graficar(T, resultado_euler_3, resultado_exacto_3, resultado_rungekutta2_3, resultado_rungekutta4_3, "Escenario 3"); 
-  graficar(T, resultado_euler_4, resultado_exacto_4, resultado_rungekutta2_4, resultado_rungekutta4_4, "Escenario 4"); 
+  graficar(T, resultado_euler_1, resultado_exacto_1, resultado_rungekutta2_1, resultado_rungekutta4_1, "Escenario 1", 10); 
+  graficar(T, resultado_euler_2, resultado_exacto_2, resultado_rungekutta2_2, resultado_rungekutta4_2, "Escenario 2", 20); 
+  graficar(T, resultado_euler_3, resultado_exacto_3, resultado_rungekutta2_3, resultado_rungekutta4_3, "Escenario 3", 30); 
+  graficar(T, resultado_euler_4, resultado_exacto_4, resultado_rungekutta2_4, resultado_rungekutta4_4, "Escenario 4", 40); 
 
 
   
