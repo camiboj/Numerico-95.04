@@ -18,7 +18,11 @@ function _graficar(T, U_euler, U_lsode, U_rk2, U_rk4, titulo, atributo, columna,
   
   h = legend('Euler', 'Lsode', 'Runge-Kutta Orden 2', 'Runge-Kutta Orden 4');
   legend(h, 'location', 'southwest');
+  #        #        #        #        #        #        #        #
+  #     código que se uso para guardar los gráficos como pdf     #
+  #        #        #        #        #        #        #        #
   
-  filename = strcat(int2str(plot_num),"-", atributo, ".pdf");
-  hgsave(filename);
+  # filename = strcat(int2str(plot_num),"-", atributo, ".pdf");
+  # hgsave(filename);
+  
   hold off;
