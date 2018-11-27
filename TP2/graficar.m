@@ -1,24 +1,16 @@
-function graficar(T, U_euler, U_lsode, U_rk2, U_rk4)
+function graficar(T, U_euler, U_lsode, U_rk2, U_rk4, titulo)
+  
+  ##############################################################################################
+  #      col1, col2, col3 y bla tienen que cambiar por nombre de atibuto de cada columna       #
+  ##############################################################################################
+  
+  #     #     #     #     #     #     #     #     #     #     #     #     #
+  #  tampoco se bien si son 4 o mas, pero de ultima es repetir la linea   #
+  #     #     #     #     #     #     #     #     #     #     #     #     #
 
-  hold on;
-  
-  title("Escenario 1");
-  xlabel("Trayectoria");
-  ylabel("Tiempo");
-  
-  plot(T, U_euler(:, 1), 'k-.',
-       T, U_lsode(:, 1), 'm*', 
-       T, U_rk2(:, 1), 'g--', 
-       T, U_rk4(:, 1), 'b-');
-       
-  plot(T, U_euler(:, 3), 'k-.',
-       T, U_lsode(:, 3), 'm*', 
-       T, U_rk2(:, 3), 'g--', 
-       T, U_rk4(:, 3), 'b-');
-  
-  h = legend('Euler', 'Lsode', 'Runge-Kutta Orden 2', 'Runge-Kutta Orden 4');
-  legend(h, 'location', 'southwest');
-  
-  hold off;
-  
+  _graficar(T, U_euler, U_lsode, U_rk2, U_rk4, titulo, "col1", 1)
+  _graficar(T, U_euler, U_lsode, U_rk2, U_rk4, titulo, "col2", 2)
+  _graficar(T, U_euler, U_lsode, U_rk2, U_rk4, titulo, "col3", 3)
+  _graficar(T, U_euler, U_lsode, U_rk2, U_rk4, titulo, "col4", 4)
+
 endfunction
