@@ -6,7 +6,7 @@ function graficar(T, U_euler, U_lsode, U_rk2, U_rk4)
   xlabel("Trayectoria");
   ylabel("Tiempo");
   
-  plot(T, U_euler(:, 1), 'k-.',
+  plot(T, , 'k-.',
        T, U_lsode(:, 1), 'm*', 
        T, U_rk2(:, 1), 'g--', 
        T, U_rk4(:, 1), 'b-');

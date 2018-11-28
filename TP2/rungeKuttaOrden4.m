@@ -5,16 +5,15 @@
 
 function [valor_variables] = rungeKuttaOrden4(fprima, T, cond_iniciales, h)
 
-  M = length(T);
-  N = length(cond_iniciales);
-  
+  M = length(T); #el numero de filas debe ser la cantidad de tiempos en los que calculo
+  N = length(cond_iniciales); #el numero de columnas debe ser la cantidad de incognitas
   valor_variables = zeros(M,N);
-      
+  
   for i = 1:N #la primera fila es t=0 entonces evaluo en las condiciones iniciales
     valor_variables(1,i) = cond_iniciales(i);
   endfor
 
-  for j = 1 : M
+  for j = 1 : (M-1)
     K1 = h * feval(fprima, valor_variables(j, :), T(j));
     K2 = h * feval(fprima, valor_variables(j, :) + K1/2, T(j) + h/2);
     K3 = h * feval(fprima, valor_variables(j, :) + K2/2, T(j) + h/2);

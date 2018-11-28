@@ -4,6 +4,7 @@
 #V(1)=x1 V(2)=x2 V(3)=x3 V(4)=y1 V(5)=y2 V(6)=z1 V(7)=z2 V(8)=z3
 
 function [valor_derivada] = fprima2(V, t)
+
   nu=0.004;
   betaxy=0.1;
   tita=0.02;
@@ -28,4 +29,5 @@ function [valor_derivada] = fprima2(V, t)
   valor_derivada(6)=phi*(V(4)+V(5)) - omega123*V(6)*(t-T1) - (epsilon123+u3)*V(6); #valor z1'
   valor_derivada(7)=omega123*V(6)*(t-T1) - omega123*V(7)*(t-T2) - (epsilon123+u3)*V(7); #valor z2'
   valor_derivada(8)=omega123*V(7)*(t-T2) - omega123*V(8)*(t-T3) - (epsilon123+u3)*V(8); #valor z3'
+
 endfunction
