@@ -22,7 +22,7 @@ function _graficar(T, U_euler, U_lsode, U_rk2, U_rk4, titulo, atributo, columna,
   #     código que se uso para guardar los gráficos como pdf     #
   #        #        #        #        #        #        #        #
   
-   filename = strcat(int2str(plot_num),"-", atributo, ".pdf");
-   print(filename);
+  # filename = strcat(int2str(plot_num),"-", atributo, ".pdf");
+  # hgsave(filename);
   
   hold off;
